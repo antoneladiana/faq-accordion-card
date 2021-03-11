@@ -1,0 +1,160 @@
+/* ========================================================================
+   GLOBAL STYLES
+======================================================================== */
+
+/* Variables */
+:root {
+    --highlight-color: hsl(238, 29%, 16%);
+    --hover-color: hsl(14, 88%, 65%);
+    --background-light-color: hsl(273, 75%, 66%);
+    --background-dark-color: hsl(240, 73%, 65%);
+    --question-color: hsl(237, 12%, 33%);
+    --answer-color: hsl(240, 6%, 50%);
+    --divider-color: hsl(240, 5%, 91%);
+    --main-font: 'Kumbh Sans', sans-serif;;
+}
+
+/* Box model fix */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Font */
+html {
+    font-family: var(--main-font);
+    font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Scroll behavior */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Background */
+html {
+    height: 100%;
+}
+body {
+    background: linear-gradient(0, var(--background-dark-color) 0%,
+                                var(--background-light-color) 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Images */
+img {
+    width: 100%;
+    height: auto
+}
+
+/* ========================================================================
+   COMPONENTS
+======================================================================== */
+
+/* Main */
+.main {
+    background-color: white;
+    margin: 10vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    padding: 50px 30px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5vw;
+    border-radius: 20px;
+}
+@media screen and (min-width: 1000px) {
+    .main {
+        flex-wrap: nowrap;
+        padding: 60px;
+    }
+}
+
+/* Illustration */
+.illustration {
+    flex: 0 1 350px;
+}
+@media screen and (min-width: 1000px) {
+    .illustration {
+        flex-shrink: 0;
+    }
+}
+
+/* FAQ */
+.faq {
+    font-size: 1rem;
+    flex: 1 1 400px;
+}
+.faq__title {
+    color: var(--highlight-color);
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.faq__list {
+
+}
+.faq__item {
+    border-bottom: 1px solid var(--divider-color);
+}
+.faq__item:hover {
+    cursor: pointer;
+}
+.faq__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 50px;
+    padding: 20px 0;
+}
+.faq__text {
+    color: var(--question-color);
+    font-size: 1em;
+}
+.faq__text:hover {
+    color: var(--hover-color);
+}
+.faq__icon {
+    width: 10px;
+}
+.faq__answer { 
+    color: var(--answer-color);
+    font-size: 0.9em;
+    display: none;
+    padding-bottom: 20px;
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
+}
+.attribution__link {
+    color: var(--highlight-color);
+}
+.attribution__link:hover {
+    text-decoration: none;
+    color: var(--hover-color);
+    font-weight: bold;
+}

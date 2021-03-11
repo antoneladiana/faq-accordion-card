@@ -1,0 +1,10 @@
+<svg aria-hidden="true"  style="display:none;" version="1.1" 
+     xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"> 
+    <defs>
+        <!-- Arrow down icon -->
+        <symbol id="icon-arrow-down" viewBox="0 0 10 7">
+            <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/>
+        </symbol>
+    </defs> 
+</svg>

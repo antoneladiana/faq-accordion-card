@@ -1,40 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- Title -->
+  <link rel="icon" type="image/png" sizes="32x32" 
+        href="./images/favicon-32x32.png">  
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- JavaScript -->
+  <script src="./javascript/script.js" defer></script>
 </head>
+
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <main class="main">
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    <!-- ILLUSTRATION -->
+    <div class="illustration">
+      <img class="illustration__image"
+           src="./images/illustration-woman-online-mobile.svg" 
+           alt="Woman online."
+           width="266" height="196">
+    </div>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+    <!-- FAQ -->
+    <div class="faq">
+      <h1 class="faq__title">FAQ</h1>
+      <dl class="faq__list">
+        <div class="faq__item" id="faq1" onclick="toggleAnswer('faq1')">
+          <dt class="faq__question">
+            <span class="faq__text">
+              How many team members can I invite?
+            </span>
+            <svg class="faq__icon" viewBox="0 0 10 7">
+              <use xlink:href="./images/svg-sprite.svg#icon-arrow-down"/>
+            </svg>
+          </dt>
+          <dd class="faq__answer">
+            You can invite up to 2 additional users on the Free plan. There 
+            is no limit on team members for the Premium plan.
+          </dd>
+        </div>
+        <div class="faq__item" id="faq2" onclick="toggleAnswer('faq2')">
+          <dt class="faq__question">
+            <span class="faq__text">
+              What is the maximum file upload size?
+            </span>
+            <svg class="faq__icon" viewBox="0 0 10 7">
+              <use xlink:href="./images/svg-sprite.svg#icon-arrow-down"/>
+            </svg>
+          </dt>
+          <dd class="faq__answer">
+            No more than 2GB. All files in your account must fit your 
+            allotted storage space.
+          </dd>
+        </div>
+        <div class="faq__item" id="faq3" onclick="toggleAnswer('faq3')">
+          <dt class="faq__question">
+            <span class="faq__text">
+              How do I reset my password?
+            </span>
+            <svg class="faq__icon" viewBox="0 0 10 7">
+              <use xlink:href="./images/svg-sprite.svg#icon-arrow-down"/>
+            </svg>
+          </dt>
+          <dd class="faq__answer">
+            Click “Forgot password” from the login page or “Change 
+            password” from your profile page. A reset link will be emailed 
+            to you.
+          </dd>
+        </div>
+        <div class="faq__item" id="faq4" onclick="toggleAnswer('faq4')">
+          <dt class="faq__question">
+            <span class="faq__text">
+              Can I cancel my subscription?
+            </span>
+            <svg class="faq__icon" viewBox="0 0 10 7">
+              <use xlink:href="./images/svg-sprite.svg#icon-arrow-down"/>
+            </svg>
+          </dt>
+          <dd class="faq__answer">
+            Yes! Send us a message and we’ll process your request no 
+            questions asked.
+          </dd>
+        </div>
+        <div class="faq__item" id="faq5" onclick="toggleAnswer('faq5')">
+          <dt class="faq__question">
+            <span class="faq__text">
+              Do you provide additional support?
+            </span>
+            <svg class="faq__icon" viewBox="0 0 10 7">
+              <use xlink:href="./images/svg-sprite.svg#icon-arrow-down"/>
+            </svg>
+          </dt>
+          <dd class="faq__answer">
+            Chat and email support is available 24/7. Phone lines are open 
+            during normal business hours.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </main>
+  
+  <!-- ATTRIBUTION -->
+  <footer>
+    <p class="attribution">
+      Challenge by 
+      <a class="attribution__link" 
+         href="https://www.frontendmentor.io" target="_blank">
+        Frontend Mentor</a>. Coded by 
+      <a class="attribution__link" 
+         href="https://antoneladiana.github.io/" target="_blank">
+        Antonela Diana</a>.
+    </p>
+  </footer>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
